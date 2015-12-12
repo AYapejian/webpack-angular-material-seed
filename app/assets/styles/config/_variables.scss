@@ -1,0 +1,11 @@
+$spacing-normal:            4px;
+$spacing-medium:            10px;
+
+$base-background-color:     #808080;
+$base-foreground-color:     #00f;
+
+$background-color:          $base-background-color;
+$background-color-light:    lighten($background-color, 30);
+
+$foreground-color:          $base-foreground-color;
+$foreground-color-light:    lighten($foreground-color, 30);

@@ -1,0 +1,30 @@
+# Bring in airbnb's setup and override what we don't like
+# See: https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+{
+  "extends": "airbnb",
+
+  "parser": "babel-eslint",
+  "globals": {
+      "angular": true,
+      "browser": true
+  },
+  "rules": {
+    "indent":           [2, 4, {"VariableDeclarator": { "var": 1, "let": 1, "const": 1}}],
+    "max-len":          [1, 120, 4, {"ignoreComments": true}],
+    "quote-props":      [1, "consistent-as-needed"],
+    "no-cond-assign":   [2, "except-parens"],
+    "radix":            0,
+    "space-infix-ops":  0,
+    "no-unused-vars":   [1, {"vars": "local", "args": "none"}],
+    "one-var":          [2, {"uninitialized": "always", "initialized": "never"}],
+    "default-case":     2,
+    "no-else-return":   0,
+    "quotes":           [2, "single", "avoid-escape"],
+    "no-multi-spaces":  [2, { "exceptions": {
+        "VariableDeclarator": true,
+        "ImportDeclaration": true } }],
+    "comma-dangle":     0,
+    "key-spacing":      [2, { "align": "value" }],
+    "no-param-reassign": 0,
+  }
+}

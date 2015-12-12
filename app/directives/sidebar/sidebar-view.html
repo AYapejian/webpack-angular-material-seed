@@ -1,0 +1,26 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left-sidebar">
+    <md-toolbar class="md-theme-indigo">
+        <div class="md-toolbar-tools">
+            <app-user-avatar></app-user-avatar>
+            <span flex></span>
+            <md-button class="md-icon-button" aria-label="Close" ng-click="close()">
+                <md-icon>keyboard_backspace</md-icon>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding>
+        <md-list>
+            <md-subheader class="md-no-sticky">Sections</md-subheader>
+
+            <md-list-item ng-click="navigateTo('Home', $event)">
+                <md-icon>home</md-icon>
+                <p>Home</p>
+            </md-list-item>
+            <md-list-item ng-click="navigateTo('Settings', $event)">
+                <md-icon>settings</md-icon>
+                <p>Settings</p>
+            </md-list-item>
+        </md-list>
+      <md-divider ></md-divider>
+    </md-content>
+</md-sidenav>

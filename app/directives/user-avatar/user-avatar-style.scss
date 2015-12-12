@@ -1,0 +1,5 @@
+@import 'app/assets/styles/config/variables';
+
+.user-avatar {
+    color: lighten($foreground-color-light, 50);
+}

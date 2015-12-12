@@ -1,7 +1,7 @@
 {
-  "name": "angular-material-webpack",
+  "name": "webpack-angular-material-seed",
   "version": "0.1.0",
-  "description": "",
+  "description": "A complete build system for Angular Material using Webpack.",
   "main": "index.js",
   "scripts": {
     "build": "webpack",

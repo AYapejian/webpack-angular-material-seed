@@ -1,6 +1,9 @@
 import homeView from '../views/home/home-view.html';
 import settingsView from '../views/settings/settings-view.html';
 
+// TODO: Look at require.context to let views define their routes and loop through
+// all views setting up routes as needed.
+
 /* @ngInject */
 function OnConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     $stateProvider

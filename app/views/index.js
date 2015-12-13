@@ -2,14 +2,13 @@ import angular from 'angular';
 
 const views = angular.module('app.views', []);
 
-import HomeCtrl from './home/home-ctrl.js';
-import HomeService from './home/home-service.js';
-import SettingsCtrl from './settings/settings-ctrl.js';
-import SettingsService from './settings/settings-service.js';
+let currentRequire = null;
+function requireAll(module, r) {
+    r.keys().forEach(function _requireing(req) {
+        currentRequire = require(req).default;
+        module(currentRequire.name, currentRequire.fn);
+    });
+}
 
-// TODO: Look into webpack's dynamic requires
-views.controller(HomeCtrl.name, HomeCtrl.fn);
-views.service(HomeService.name, HomeService.fn);
-
-views.controller(SettingsCtrl.name, SettingsCtrl.fn);
-views.service(SettingsService.name, SettingsService.fn);
+requireAll(views.controller, require.context('./', true, /ctrl\.js$/));
+requireAll(views.service, require.context('./', true, /service\.js$/));
